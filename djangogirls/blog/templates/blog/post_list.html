@@ -1,0 +1,53 @@
+{% comment %}
+blog folder
+{% endcomment %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Django Girls blog</title>
+    </head>
+    <body>
+        <header>
+            <h1><a href="/">Django Girls Blog</a></h1>
+        </header>
+
+        <article>
+            <time>published: 02.12.2025, 20:15</time>
+            <h2><a href="">My first post</a></h2>
+            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        </article>
+
+        <article>
+            <time>published: 02.12.2025, 20:15</time>
+            <h2><a href="">My second post</a></h2>
+            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut f.</p>
+        </article>
+        {% if post %}
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Author</th>
+                        <th>Title</th>
+                        <th>Text</th>
+                        <th>Published Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in post %}
+                    <tr>
+                        <td>{{ row.author }}</td>
+                        <td>{{ row.title }}</td>
+                        <td>{{ row.text }}</td>
+                        <td>{{ row.published_date }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% else %}
+        <div class = "noposts"> No posts found!</div>
+        {% endif %}
+    </body>
+</html>
