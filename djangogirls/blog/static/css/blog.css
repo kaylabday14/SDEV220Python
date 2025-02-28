@@ -28,6 +28,11 @@ h4 {
 .save {
     float: right;
 }
+.submit {
+    border-style: dotted;
+    border-color: #471f02;
+    color: #ffffff
+}
 
 .post-form textarea,
 .post-form input {
@@ -59,12 +64,13 @@ h4 {
 
 .btn-secondary,
 .btn-secondary:visited {
-    color: #C25100;
+    color: #FFFFFF;
     background: none;
     border-color: #C25100;
 }
 
 .btn-secondary:hover {
-    color: #FFFFFF;
+    color: #ffffff5a;
     background-color: #C25100;
 }
+
